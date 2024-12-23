@@ -1,4 +1,4 @@
-import Image from "next/image";
+import List from "@/components/List/List";
 const API_KEY = process.env.API_KEY;
 
 export default async function Home({ searchParams }) {
@@ -20,5 +20,9 @@ export default async function Home({ searchParams }) {
 
   console.log("api results", results);
 
-  return <div>Home</div>;
+  return (
+    <div>
+      <List results={results} />
+    </div>
+  );
 }
